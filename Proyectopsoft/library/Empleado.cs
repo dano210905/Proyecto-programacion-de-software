@@ -17,14 +17,11 @@ namespace library
         [MaxLength(15, ErrorMessage = "El documento no puede tener mas de 15 caracteres")]
         public string Documento { get; set; }
         [Required(ErrorMessage = "El cargo es obligatorio")]
-
         public string Cargo { get; set; }
         [Required(ErrorMessage = "El area de trabajo es obligatoria")]
-
         public string AreaTrabajo { get; set; }
         public string MetasBienestar { get; set; }
         public string RestriccionesMedicas { get; set; }
-
         [Required(ErrorMessage = "La disponibilidad no es obligatoria")]
         public string Disponibilidad { get; set; }
 

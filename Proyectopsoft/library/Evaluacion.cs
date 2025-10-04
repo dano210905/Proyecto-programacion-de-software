@@ -11,7 +11,6 @@ namespace library
         public int IdEvaluacion { get; set; }
         public int Calificacion { get; set; }
         public string Comentario { get; set; }
-
         public int IdActividad { get; set; }
         public Actividad Actividad { get; set; }
 
