@@ -22,9 +22,9 @@ namespace library
         public string AreaTrabajo { get; set; }
         public string MetasBienestar { get; set; }
         public string RestriccionesMedicas { get; set; }
-        [Required(ErrorMessage = "La disponibilidad no es obligatoria")]
+        [Required(ErrorMessage = "La    disponibilidad no es obligatoria")]
         public string Disponibilidad { get; set; }
-
+        [Required(ErrorMessage = "El Telefono")]
         public string Telefono { get; set; }
 
         public string Correo { get; set; }
