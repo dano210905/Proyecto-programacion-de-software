@@ -44,14 +44,15 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actividad.cs" />
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Empleadoactividad.cs" />
-    <Compile Include="Especialista.cs" />
-    <Compile Include="Evaluacion.cs" />
-    <Compile Include="PBienestar.cs" />
+    <Compile Include="Entities\Actividad.cs" />
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Empleadoactividad.cs" />
+    <Compile Include="Entities\Especialista.cs" />
+    <Compile Include="Entities\Evaluacion.cs" />
+    <Compile Include="Entities\PBienestar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
