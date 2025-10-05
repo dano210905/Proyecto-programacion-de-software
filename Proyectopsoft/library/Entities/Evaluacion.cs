@@ -8,7 +8,7 @@ namespace library
 {
     public class Evaluacion
     {
-        public int IdEvaluacion { get; set; }
+        public int Id { get; set; }
         public int Calificacion { get; set; }
         public string Comentario { get; set; }
         public int IdActividad { get; set; }

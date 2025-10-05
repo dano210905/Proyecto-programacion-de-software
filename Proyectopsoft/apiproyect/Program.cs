@@ -1,4 +1,6 @@
+using apiproyect.Data;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +41,9 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+builder.Services.AddDbContext<Datacontext>(x => x.UseSqlServer("name=DefaultConnection"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

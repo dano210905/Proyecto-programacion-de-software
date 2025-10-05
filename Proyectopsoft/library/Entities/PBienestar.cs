@@ -14,7 +14,7 @@ namespace library
     public class PBienestar
     {
         [Required(ErrorMessage = "El id del programa es obligatorio")]
-        public int IdPrograma { get; set; }
+        public int Id{ get; set; }
         [MaxLength(30, ErrorMessage = "El nombre del programa no puede tener más de 30 caracteres")]
         public string Nombre { get; set; }
         public string Categoria { get; set; }

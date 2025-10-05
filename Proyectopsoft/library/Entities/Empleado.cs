@@ -7,7 +7,7 @@ namespace library
     {
 
         [Required(ErrorMessage = "Id de empleado obligatorio")]
-        public int IdEmpleado { get; set; }
+        public int Id { get; set; }
         [MaxLength(20, ErrorMessage = "El nombre  no puede tener más de 25 caracteres")]
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El nombre solo debe contener letras")]

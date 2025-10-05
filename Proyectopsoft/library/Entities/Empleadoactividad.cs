@@ -10,7 +10,7 @@ namespace library
     public class Empleadoactividad
     {
         [Required(ErrorMessage = "Id de empleado obligatorio")]
-        public int IdEmpleado { get; set; }
+        public int Id{ get; set; }
         public Empleado Empleado { get; set; }
 
         [Required(ErrorMessage = "Id de la actividad es obligatorio")]

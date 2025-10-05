@@ -10,7 +10,7 @@ namespace library
     public class Actividad
     {
         [Required(ErrorMessage = "Id de actividad obligatorio")]
-        public int IdActividad { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage = "Nombre actividad obligatorio")]
         [MaxLength(40, ErrorMessage = "El nombre de la actividad no puede tener más de 40 caracteres")]
         public string Nombre { get; set; }
