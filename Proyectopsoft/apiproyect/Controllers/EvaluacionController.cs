@@ -9,11 +9,11 @@ namespace apiproyect.Controllers
 {
     [ApiController]
     [Route("/api/Actividad")]
-    public class ActividadController : ControllerBase
+    public class EvaluacionController : ControllerBase
     {
         private readonly Datacontext _context;
 
-        public ActividadController(Datacontext context)
+        public EvaluacionController(Datacontext context)
         {
             _context = context;
         }
@@ -21,37 +21,37 @@ namespace apiproyect.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
-            var Actividad = await _context.Actividades
+            var Evaluacion = await _context.Evaluaciones
                 .FirstOrDefaultAsync(x => x.Id == id);
-            if (Actividad == null)
+            if (Evaluacion == null)
             {
-                return NotFound("La actividad");
+                return NotFound("La evaluacion");
             }
-            return Ok(Actividad);
+            return Ok(Evaluacion);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Actividad actividad)
+        public async Task<IActionResult> Post(Evaluacion evaluacion)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.Evaluaciones.Add(evaluacion);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(evaluacion);
         }
 
         [HttpPut]
-        public async Task<IActionResult> put(Actividad actividad)
+        public async Task<IActionResult> put(Evaluacion evaluacion)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.Evaluaciones.Add(evaluacion);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(evaluacion);
         }
 
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var Fafect = await _context.Actividades
+            var Fafect = await _context.Evaluaciones
                 .Where(x => x.Id == id).ExecuteDeleteAsync();
             if (Fafect == 0)
             {

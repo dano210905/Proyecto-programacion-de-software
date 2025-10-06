@@ -25,7 +25,7 @@ namespace apiproyect.Controllers
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (Especialista == null)
             {
-                return NotFound("El empleado no fue encontrado");
+                return NotFound("El especialista");
             }
             return Ok(Especialista);
         }

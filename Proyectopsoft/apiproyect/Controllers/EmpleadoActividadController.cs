@@ -9,11 +9,11 @@ namespace apiproyect.Controllers
 {
     [ApiController]
     [Route("/api/Actividad")]
-    public class ActividadController : ControllerBase
+    public class EmpleadoactividadController : ControllerBase
     {
         private readonly Datacontext _context;
 
-        public ActividadController(Datacontext context)
+        public EmpleadoactividadController(Datacontext context)
         {
             _context = context;
         }
@@ -21,37 +21,37 @@ namespace apiproyect.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
-            var Actividad = await _context.Actividades
+            var Empleadoactividad = await _context.Empleadoactividades
                 .FirstOrDefaultAsync(x => x.Id == id);
-            if (Actividad == null)
+            if (Empleadoactividad == null)
             {
-                return NotFound("La actividad");
+                return NotFound("La actividad con el empleado");
             }
-            return Ok(Actividad);
+            return Ok(Empleadoactividad);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Actividad actividad)
+        public async Task<IActionResult> Post(Empleadoactividad empleadoactividad)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.Empleadoactividades.Add(empleadoactividad);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(empleadoactividad);
         }
 
         [HttpPut]
-        public async Task<IActionResult> put(Actividad actividad)
+        public async Task<IActionResult> put(Empleadoactividad empleadoactividad)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.Empleadoactividades.Add(empleadoactividad);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(empleadoactividad);
         }
 
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var Fafect = await _context.Actividades
+            var Fafect = await _context.Empleadoactividades
                 .Where(x => x.Id == id).ExecuteDeleteAsync();
             if (Fafect == 0)
             {

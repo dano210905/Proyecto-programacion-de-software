@@ -8,12 +8,12 @@ using library;
 namespace apiproyect.Controllers
 {
     [ApiController]
-    [Route("/api/Actividad")]
-    public class ActividadController : ControllerBase
+    [Route("/api/EmpleadoController")]
+    public class PBienestarController : ControllerBase
     {
         private readonly Datacontext _context;
 
-        public ActividadController(Datacontext context)
+        public PBienestarController(Datacontext context)
         {
             _context = context;
         }
@@ -21,37 +21,37 @@ namespace apiproyect.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
-            var Actividad = await _context.Actividades
+            var pBienestar = await _context.PBienestars
                 .FirstOrDefaultAsync(x => x.Id == id);
-            if (Actividad == null)
+            if (pBienestar == null)
             {
-                return NotFound("La actividad");
+                return NotFound("El programa de bienestar no fue encontrado");
             }
-            return Ok(Actividad);
+            return Ok(pBienestar);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Actividad actividad)
+        public async Task<IActionResult> Post(PBienestar pbienestar)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.PBienestars.Add(pbienestar);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(pbienestar);
         }
 
         [HttpPut]
-        public async Task<IActionResult> put(Actividad actividad)
+        public async Task<IActionResult> put(PBienestar pbienestar)
         {
 
-            _context.Actividades.Add(actividad);
+            _context.PBienestars.Add(pbienestar);
             await _context.SaveChangesAsync();
-            return Ok(actividad);
+            return Ok(pbienestar);
         }
 
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var Fafect = await _context.Actividades
+            var Fafect = await _context.PBienestars
                 .Where(x => x.Id == id).ExecuteDeleteAsync();
             if (Fafect == 0)
             {
