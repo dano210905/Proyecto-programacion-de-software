@@ -28,8 +28,4 @@
     <ProjectReference Include="..\library\library.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
