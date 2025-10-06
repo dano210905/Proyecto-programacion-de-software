@@ -7,6 +7,8 @@ using library;
 
 namespace apiproyect.Controllers
 {
+    [ApiController]
+    [Route("/api/Actividad")]
     public class ActividadController : ControllerBase
     {
         private readonly Datacontext _context;
@@ -16,7 +18,7 @@ namespace apiproyect.Controllers
             _context = context;
         }
 
-        [HttpGet("{id:int }")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
             var Actividad = await _context.Actividades
@@ -46,7 +48,7 @@ namespace apiproyect.Controllers
             return Ok(actividad);
         }
 
-        [HttpDelete("{id:int }")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
             var Fafect = await _context.Actividades

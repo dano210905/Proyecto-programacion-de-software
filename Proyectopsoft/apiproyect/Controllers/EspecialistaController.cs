@@ -7,6 +7,8 @@ using library;
 
 namespace apiproyect.Controllers
 {
+    [ApiController]
+    [Route("/api/Especialista")]
     public class EspecialistaController : ControllerBase
     {
         private readonly Datacontext _context;
@@ -16,7 +18,7 @@ namespace apiproyect.Controllers
             _context = context;
         }
 
-        [HttpGet("{id:int }")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
             var Especialista = await _context.Empleados
@@ -46,7 +48,7 @@ namespace apiproyect.Controllers
             return Ok(especialista);
         }
 
-        [HttpDelete("{id:int }")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
             var Fafect = await _context.Especialistas
