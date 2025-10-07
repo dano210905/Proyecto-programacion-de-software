@@ -21,6 +21,7 @@ namespace library
         [Display(Name = "Comentarios Empleado")]
         [MaxLength(200, ErrorMessage = "El comentario no puede tener más de 200 caracteres")]
 
+        public int Id { get; set; }
         public string Comentario { get; set; }
 
         [Display(Name = "Calificacion empleado")]
