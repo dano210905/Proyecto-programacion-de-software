@@ -18,6 +18,15 @@ namespace apiproyect.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public async Task<ActionResult> Get()
+        {
+
+            return Ok(await _context.Actividades.ToListAsync());
+
+
+        }   
+
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {

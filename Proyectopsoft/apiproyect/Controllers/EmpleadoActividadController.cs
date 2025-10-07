@@ -8,7 +8,7 @@ using library;
 namespace apiproyect.Controllers
 {
     [ApiController]
-    [Route("/api/Actividad")]
+    [Route("/api/EmpleadoActividad")]
     public class EmpleadoactividadController : ControllerBase
     {
         private readonly Datacontext _context;
@@ -16,6 +16,15 @@ namespace apiproyect.Controllers
         public EmpleadoactividadController(Datacontext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Get()
+        {
+
+            return Ok(await _context.Empleadoactividades.ToListAsync());
+
+
         }
 
         [HttpGet("{id:int}")]
