@@ -8,7 +8,7 @@ using library;
 namespace apiproyect.Controllers
 {
     [ApiController]
-    [Route("/api/Actividad")]
+    [Route("/api/Evaluacion")]
     public class EvaluacionController : ControllerBase
     {
         private readonly Datacontext _context;

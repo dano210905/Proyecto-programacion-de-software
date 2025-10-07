@@ -49,6 +49,7 @@
     <Compile Include="Entities\Empleadoactividad.cs" />
     <Compile Include="Entities\Especialista.cs" />
     <Compile Include="Entities\Evaluacion.cs" />
+    <Compile Include="Entities\JsonIgnoreAttribute.cs" />
     <Compile Include="Entities\PBienestar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

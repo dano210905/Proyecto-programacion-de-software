@@ -8,7 +8,7 @@ using library;
 namespace apiproyect.Controllers
 {
     [ApiController]
-    [Route("/api/EmpleadoController")]
+    [Route("/api/Bienestar")]
     public class PBienestarController : ControllerBase
     {
         private readonly Datacontext _context;

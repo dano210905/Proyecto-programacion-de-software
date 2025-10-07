@@ -9,14 +9,24 @@ namespace library
 {
     public class Empleadoactividad
     {
-        [Required(ErrorMessage = "Id de empleado obligatorio")]
-        public int Id{ get; set; }
+        [JsonIgnore]
         public Empleado Empleado { get; set; }
+        public int EmpleadoId { get; set; }
 
-        [Required(ErrorMessage = "Id de la actividad es obligatorio")]
-        public int IdActividad { get; set; }
+        [JsonIgnore]
         public Actividad Actividad { get; set; }
-        public List<Empleadoactividad> EmpleadoActividades { get; set; }
 
+        public int IdActividad { get; set; }
+
+        [Display(Name = "Comentarios Empleado")]
+        [MaxLength(200, ErrorMessage = "El comentario no puede tener más de 200 caracteres")]
+
+        public string Comentario { get; set; }
+
+        [Display(Name = "Calificacion empleado")]
+        [Required(ErrorMessage = "La calificación es obligatoria")]
+        [MaxLength(1, ErrorMessage = "La calificación no puede tener mas de 1 caracter")]
+        [RegularExpression(@"^[0-5]+$", ErrorMessage = "El nombre solo debe contener números")]
+        public string Calificacion { get; set; }
     }
 }

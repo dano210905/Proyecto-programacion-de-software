@@ -23,9 +23,8 @@ namespace library
         public string Frecuencia { get; set; }
 
         //relaciones
-        public int IdEspecialista { get; set; }
+        [JsonIgnore]
         public Especialista Especialista { get; set; }
-        public List<Actividad> Actividades { get; set; }
-
+        public int EspecialistaId { get; set; }
     }
 }

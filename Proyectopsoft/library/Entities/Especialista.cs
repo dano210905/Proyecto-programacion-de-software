@@ -19,10 +19,10 @@ namespace library
         public string Especialidad { get; set; }
         public string Credenciales { get; set; }
         public string DisponibilidadHoraria { get; set; }
+
         [Required(ErrorMessage = "La tarifa es obligatoria")]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Tarifa { get; set; }
 
-        public List<PBienestar> Programas { get; set; }
     }
 }
