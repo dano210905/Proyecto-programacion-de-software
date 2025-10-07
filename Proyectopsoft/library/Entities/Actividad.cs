@@ -28,8 +28,8 @@ namespace library
         [Required(ErrorMessage = "ID del programa obligatorio")]
         public int IdPrograma { get; set; }
         public PBienestar Programa { get; set; }
-        public List<Evaluacion> Evaluaciones { get; set; }
-        public List<Empleadoactividad> EmpleadoActividades { get; set; }
+        public Evaluacion Evaluaciones { get; set; }
+        public Empleadoactividad EmpleadoActividades { get; set; }
 
     }
 }

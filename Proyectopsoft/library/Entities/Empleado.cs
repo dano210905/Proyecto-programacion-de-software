@@ -6,7 +6,6 @@ namespace library
     public class Empleado
     {
 
-        [Required(ErrorMessage = "Id de empleado obligatorio")]
         public int Id { get; set; }
 
         [Display(Name = "Nombre del empleado")]
@@ -32,6 +31,8 @@ namespace library
         [MaxLength(100, ErrorMessage = "El area no puede tener más de 100 caracteres")]
         [Required(ErrorMessage = "El Area es obligatorio")]
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El Area solo debe contener letras")]
+        [MaxLength(100, ErrorMessage = "El documento no puede tener mas de 100 caracteres")]
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "El Area de Trabajo solo debe contener letras")]
         public string AreaTrabajo { get; set; }
 
         [Display(Name = "Metas del empleado")]

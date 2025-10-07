@@ -41,6 +41,5 @@ namespace library
         [Column(TypeName = "decimal(18,2)")]
         public decimal Tarifa { get; set; }
 
-        public List<PBienestar> Programas { get; set; }
     }
 }
